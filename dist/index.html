@@ -13,13 +13,13 @@
 </head>
 <body>
 		<div class="container">
-			<header class="header row"><img class="col-md-3 col-5 header__logo" src="./assets/img/logo.png" alt="Логотип"/>
+			<header class="header row"><img class="col-md-3 col-6 header__logo" src="./assets/img/logo.png" alt="Логотип"/>
 				<div class="col-auto header__navigation">
 						<ul class="main-nav header__main-nav">
 							<li class="main-nav__item main-nav__item--active main-nav__item"><a class="main-nav__link" href="about.html">О компании</a>
 							</li>
 							<li class="main-nav__item  main-nav__item--hasSubmenu"><a class="main-nav__link" href="pages/products.html">Продукция</a>
-								<ul class="submenu">
+								<ul class="main-nav__submenu submenu">
 									<li class="submenu__item"><a class="submenu__link" href="">Пластиковые окна</a></li>
 									<li class="submenu__item"><a class="submenu__link" href="">Балконы и лоджии</a></li>
 									<li class="submenu__item"><a class="submenu__link" href="">Пластиковые двери</a></li>
@@ -29,7 +29,7 @@
 								</ul>
 							</li>
 							<li class="main-nav__item  main-nav__item--hasSubmenu"><a class="main-nav__link" href="services.html">Услуги</a>
-								<ul class="submenu">
+								<ul class="main-nav__submenu submenu">
 									<li class="submenu__item"><a class="submenu__link" href="">Производство</a></li>
 									<li class="submenu__item"><a class="submenu__link" href="">Доставка</a></li>
 									<li class="submenu__item"><a class="submenu__link" href="">Монтаж</a></li>
@@ -46,19 +46,41 @@
 							</li>
 						</ul>
 				</div>
-				<div class="col-md-6 col-1 header__toggle-menu toggle-menu">
+				<div class="col-4 header__toggle-menu toggle-menu">
 					<div class="toggle-menu__burger">
 						<div class="toggle-menu__stick"></div>
 						<div class="toggle-menu__stick"></div>
 						<div class="toggle-menu__stick"></div>
 					</div>
 						<ul class="toggle-menu__menu-wrap menu-wrap">
-							<li class="menu-wrap__item"><a class="menu-wrap__link" href="about.html">О компании</a></li>
-							<li class="menu-wrap__item"><a class="menu-wrap__link" href="pages/products.html">Продукция</a></li>
-							<li class="menu-wrap__item"><a class="menu-wrap__link" href="services.html">Услуги</a></li>
-							<li class="menu-wrap__item"><a class="menu-wrap__link" href="sales.html">Акции</a></li>
-							<li class="menu-wrap__item"><a class="menu-wrap__link" href="works.html">Наши работы</a></li>
-							<li class="menu-wrap__item"><a class="menu-wrap__link" href="contacts.hmtl">Контакты</a></li>
+							<li class="menu-wrap__item "><a class="menu-wrap__link">О компании</a>
+							</li>
+							<li class="menu-wrap__item menu-wrap__item--hasSubmenu"><a class="menu-wrap__link">Продукция</a>
+								<ul class="menu-wrap__submenu submenu">
+									<li class="submenu__item"><a class="submenu__link" href="/">Пластиковые окна</a></li>
+									<li class="submenu__item"><a class="submenu__link" href="/">Балконы и лоджии</a></li>
+									<li class="submenu__item"><a class="submenu__link" href="/">Пластиковые двери</a></li>
+									<li class="submenu__item"><a class="submenu__link" href="/">Жалюзи и рулонные шторы</a></li>
+									<li class="submenu__item"><a class="submenu__link" href="/">Ролтсавни</a></li>
+									<li class="submenu__item"><a class="submenu__link" href="/">Комплектующие</a></li>
+								</ul>
+							</li>
+							<li class="menu-wrap__item menu-wrap__item--hasSubmenu"><a class="menu-wrap__link">Услуги</a>
+								<ul class="menu-wrap__submenu submenu">
+									<li class="submenu__item"><a class="submenu__link" href="/">Производство</a></li>
+									<li class="submenu__item"><a class="submenu__link" href="/">Доставка</a></li>
+									<li class="submenu__item"><a class="submenu__link" href="/">Монтаж</a></li>
+									<li class="submenu__item"><a class="submenu__link" href="/">Замер и заказ</a></li>
+									<li class="submenu__item"><a class="submenu__link" href="/">Ремонт и обслуживание</a></li>
+									<li class="submenu__item"><a class="submenu__link" href="/">Гарантии</a></li>
+								</ul>
+							</li>
+							<li class="menu-wrap__item "><a class="menu-wrap__link">Акции</a>
+							</li>
+							<li class="menu-wrap__item "><a class="menu-wrap__link">Наши работы</a>
+							</li>
+							<li class="menu-wrap__item "><a class="menu-wrap__link">Контакты</a>
+							</li>
 						</ul>
 				</div><span class="col-auto header__phone">8(8202)54-06-41</span>
 			</header>
@@ -110,4 +132,5 @@
 	</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="./assets/js/mobile-menu.js"></script>
 </body>
