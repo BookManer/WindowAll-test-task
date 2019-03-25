@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="../fonts/fonts/museosanscyrl.css"/>
 	<link rel="stylesheet" href="../fonts/fonts/style.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
 	<title>Продукция | Окна всем</title>
 </head>
 <body>
@@ -66,8 +67,69 @@
 				</div><span class="col-auto header__phone">8(8202)54-06-41</span>
 			</header>
 		</div>
+	<div class="cont-modal">
+		<div class="modal form"><span class="modal__btn-close fa fa-times"></span>
+			<h2 class="form__heading-line">Заказать звонок</h2>
+			<label>
+				<input class="form__field" type="text" data-foo="Имя" required="required"/><span class="psevdo-placeholder">Имя</span>
+			</label>
+			<label>
+				<input class="form__field" type="phone" data-placeholder="Телефон" required="required"/><span class="psevdo-placeholder">Телефон</span>
+			</label>
+			<div class="wrap">
+				<label class="custom-cont">
+					<input class="form__checkbox" type="checkbox" checked="checked"/>
+					<div class="custom-checkbox"></div>
+				</label><span>Согласен на обработку<a href="/">персональных данных</a></span>
+			</div>
+			<button class="form__submit" type="submit">Оставить заявку</button>
+		</div>
+		<div class="modal form"><span class="modal__btn-close fa fa-times"></span>
+			<h2 class="form__heading-line">Заказать замер</h2>
+			<label>
+				<input class="form__field" type="text" data-foo="Имя" required="required"/><span class="psevdo-placeholder">Имя</span>
+			</label>
+			<label>
+				<input class="form__field" type="phone" data-placeholder="Телефон" required="required"/><span class="psevdo-placeholder">Телефон</span>
+			</label>
+			<div class="wrap">
+				<label class="custom-cont">
+					<input class="form__checkbox" type="checkbox" checked="checked"/>
+					<div class="custom-checkbox"></div>
+				</label><span>Согласен на обработку<a href="/">персональных данных</a></span>
+			</div>
+			<button class="form__submit" type="submit">Оставить заявку</button>
+		</div>
+		<div class="modal form"><span class="modal__btn-close fa fa-times"></span>
+			<h2 class="form__heading-line">Консультация менеджера</h2>
+			<label>
+				<input class="form__field" type="text" data-foo="Имя" required="required"/><span class="psevdo-placeholder">Имя</span>
+			</label>
+			<label>
+				<input class="form__field" type="phone" data-placeholder="Телефон" required="required"/><span class="psevdo-placeholder">Телефон</span>
+			</label>
+			<div class="wrap">
+				<label class="custom-cont">
+					<input class="form__checkbox" type="checkbox" checked="checked"/>
+					<div class="custom-checkbox"></div>
+				</label><span>Согласен на обработку<a href="/">персональных данных</a></span>
+			</div>
+			<button class="form__submit" type="submit">Оставить заявку</button>
+		</div>
+	</div>
 	<div class="container">
 		<div class="row">
+			<div class="order-cont">
+				<figure class="order-cont__order-wrap"><span class="fa fa-phone"></span>
+					<figcaption class="order-cont__text" data-for-id-modal="0">Заказать звонок</figcaption>
+				</figure>
+				<figure class="order-cont__order-wrap"><span class="fa fa-umbrella"></span>
+					<figcaption class="order-cont__text" data-for-id-modal="1">Заказать замер</figcaption>
+				</figure>
+				<figure class="order-cont__order-wrap"><span class="fa fa-user"></span>
+					<figcaption class="order-cont__text" data-for-id-modal="2">Консультация менеджера</figcaption>
+				</figure>
+			</div>
 			<div class="col-12 slider">
 				<div class="slider__wrapp"><img src="../assets/img/картинка.png" alt="" width="100%"/></div>
 				<div class="slider__wrapp"><img src="../assets/img/картинка.png" alt="" width="100%"/></div>
@@ -150,6 +212,10 @@
 					<h3 class="feedback__heading-line">Запишитесь<br>на бесплатный<br>замер</h3>
 				</div>
 				<div class="col-md-5 col-12 feedback__form">
+					<figure class="feedback__success"><img class="feedback__icon-success" src="../assets/img/icon-succefull.png" alt="Успешная отправка"/>
+						<figcaption class="feedback__text-success">Заявка успешно отправлена</figcaption>
+					</figure>
+					<div class="feedback__loading"><span class="fa fa-spinner fa-pulse"></span></div>
 					<form class="form">
 						<label>
 							<input class="form__field" type="text" data-foo="Имя" required="required"/><span class="psevdo-placeholder">Имя</span>
@@ -214,6 +280,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<script src="../assets/js/mobile-menu.js"></script>
+	<script src="../assets/js/form.js"></script>
+	<script src="../assets/js/modals.js"></script>
 	<script>
 		$('.slider').slick({
 			dots: true,
