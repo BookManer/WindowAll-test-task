@@ -1,0 +1,10 @@
+mixin navigation(cont_class, items, id_active)
+	ul(class= `main-nav ${cont_class}__main-nav`)
+		each item,index in items
+			li(class= `main-nav__item ${(id_active == index) ? 'main-nav__item--active' : ''} main-nav__item${item.submenu ? '--hasSubmenu':''}`)
+				a(href= item.href class= "main-nav__link")= item.content
+				if item.submenu
+					ul(class="main-nav__submenu submenu")
+						for sub_item in item.submenu
+							li(class="submenu__item")
+								a(href="" class="submenu__link")= sub_item				

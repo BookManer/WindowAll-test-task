@@ -1,0 +1,16 @@
+mixin mobile-navigation(class_cont, id_item, items, is_comeback)
+	ul(class=`${class_cont}__menu-wrap menu-wrap`)
+		if is_comeback
+			a(href=".././" class="menu-wrap__item menu-wrap__item--comeback") <
+			each item in items[id_item].submenu
+				li(class="menu-wrap__item")
+					a(class="menu-wrap__link")= item
+		else
+			each item in items
+				li(class=`menu-wrap__item ${item.submenu ? "menu-wrap__item--hasSubmenu" : ""}`)
+					a(class="menu-wrap__link")= item.content
+					if item.submenu
+						ul(class="menu-wrap__submenu submenu")
+							each sub_item in item.submenu
+								li(class="submenu__item")
+									a(href="/" class="submenu__link")= sub_item

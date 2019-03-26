@@ -1,0 +1,60 @@
+.menu-wrap
+	position: absolute
+	top: 100%
+	left: 100vw
+		
+	width: 100%
+	height: auto
+
+	background: white
+
+	z-index: 999999
+
+	@media all and (max-width: 576px)
+		width: 100vw
+		height: 100vh
+
+	&__item
+		font-weight: 600
+
+		width: 100%
+		padding: .5em 40px
+
+		text-align: left
+		color: $c_link
+		border-bottom: 1px solid lightgray
+
+		&--hasSubmenu > a
+			position: relative
+			&:before
+				position: absolute
+				content: ">"
+				display: inline-block
+				right: -1em
+				transform: rotate(0deg)
+		&:hover > a:before
+			transform: rotate(-90deg)
+
+		&:hover > .submenu
+			display: block
+
+		&--comeback
+			display: block
+			width: 100%
+			background-color: $c_yellow
+
+	&--active
+		left: 0
+
+	&__submenu
+		margin: .5em 0 -0.5em -40px
+
+		color: #fff
+		border-radius: 0
+		background-color: $c_yellow
+		box-shadow: none
+		
+		opacity: 1
+
+		li
+			padding: 0 25px

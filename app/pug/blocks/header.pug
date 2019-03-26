@@ -1,0 +1,21 @@
+include ../variables.pug
+include ../mixins/navigation.pug
+include ../mixins/mobile-navigation.pug
+
+//- Options:
+//- 	dr_res(String): path to resources
+//- 	id_active(Number): Number's active link
+//- 	is_inner_page(Boolean): Is the mobile menu inner page? 
+mixin header(dr_res, id_active, is_inner_page)
+	.container
+		header.header.row
+			img(src=`${dr_res}/img/logo.png` alt='Логотип').col-md-3.col-6.header__logo
+			div(class="col-auto header__navigation")
+				+navigation("header", listItemsNavigation, id_active)
+			div(class="col-4 header__toggle-menu toggle-menu")
+				.toggle-menu__burger
+					.toggle-menu__stick
+					.toggle-menu__stick
+					.toggle-menu__stick
+				+mobile-navigation("toggle-menu", id_active, listItemsNavigation, is_inner_page)
+			span(class= "col-auto header__phone")= phone

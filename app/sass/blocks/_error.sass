@@ -1,0 +1,42 @@
+.error-cont
+	margin: 0 auto 3em auto
+
+	@media all and (max-width: 576px)
+		&__icon
+			width: 60%
+
+.wrap-error
+	width: 80%
+
+	&__title
+		font-weight: 700
+		font-size: 36px
+		margin-top: 1em
+		color: $c_link
+
+	&__descr
+		display: block
+		font-size: 1em
+		margin-bottom: 2em
+
+	&__text-icon
+		margin-top: 1em
+
+	&__btn-comeback
+		padding: 22px 74px
+		font-size: 18px
+		color: white
+		background-color: $c_link
+		box-shadow: none
+		border: none
+		border-radius: 5px
+
+		&:hover
+			background-color: $c_light_link
+			color: white
+
+	@media all and (max-width: 576px)
+		width: 100%
+
+		&__text-icon
+			width: 60%

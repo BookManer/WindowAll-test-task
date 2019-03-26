@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+	meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+	meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+	//- Favicon
+	link(rel="shortcut icon", type="image/x-icon", href="/assets/img/favicon.jpg")
+	
+	//- Bootstrap styles	
+	link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T", crossorigin="anonymous")
+	
+	//- Slick slider styles
+	link(rel="stylesheet", href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
+	link(rel="stylesheet", href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css")
+
+	//- Icon fonts
+	link(rel="stylesheet", href="https://i.icomoon.io/public/temp/26e72e998d/UntitledProject1/style.css")
+
+	block main_style
+		link(rel="stylesheet", href="./assets/css/main.css")
+
+	block title
+		title Главная | Окна всем
+body
+
+	include blocks/header
+
+	block header
+		+header("./assets", 0, false)
+
+	block content
+		.container
+			h2 Hello
+	
+	include blocks/footer
+
+	script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+	script(src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
+	block scripts
+		script(src="./assets/js/mobile-menu.js")

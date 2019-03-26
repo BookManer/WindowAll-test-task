@@ -1,0 +1,33 @@
+extends ../index.pug
+
+block main_style
+	link(rel="stylesheet", href="../assets/css/main.css")
+	link(rel="stylesheet", href="../fonts/fonts/museosanscyrl.css")
+	link(rel="stylesheet", href="../fonts/fonts/style.css")
+	link(href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet")
+	link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous")
+
+block title
+	title Ошибка
+
+block header
+	+header("../assets", 0, false)
+
+block content
+	.container.error-cont
+		hr
+		span(class="contacts__breadcrumb")
+			a(href="../") Главная  
+			|	/ Контакты
+		.row
+			.col-md-6.col-12
+				img(class="error-cont__icon" src="../assets/img/window-404.png" alt="window-404")
+			.col-md-6.col-12
+				.wrap-error
+					img(class="wrap-error__text-icon" src="../assets/img/error_404.png" alt="error-404")
+					h4(class="wrap-error__title") Страница не найдена
+					p(class="wrap-error__descr") Выберите интересующий раздел в меню или перейдите на главную страницу сайта
+					a(href="../" class="wrap-error__btn-comeback") Перейти на главную
+
+block scripts
+	script(src="../assets/js/mobile-menu.js")

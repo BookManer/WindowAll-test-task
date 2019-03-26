@@ -1,0 +1,40 @@
+.toggle-menu
+	position: static
+	display: flex
+	justify-content: flex-end
+
+
+
+	&__burger
+		display: flex
+		flex-direction: column
+		justify-content: center
+		width: 30px
+		height: 30px
+
+		cursor: pointer
+		
+		&--active
+			div:nth-of-type(2)
+				transform: translateX(100%)
+				opacity: 0
+				height: 0
+			div:first-of-type
+				transform: rotate(-45deg) translate(-2px,250%)
+			div:last-of-type
+				transform: rotate(45deg) translate(-2px,-265%)
+
+	&__stick
+		display: block
+		width: 100%
+		height: 3px
+
+		margin: 3px 0
+
+		background-color: #000
+
+	
+	
+		
+	@media all and (min-width: 991px)
+		display: none

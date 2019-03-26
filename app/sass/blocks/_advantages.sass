@@ -1,0 +1,102 @@
+.advantages
+	position: relative
+
+	&__cont
+		position: relative
+		
+		margin: 3em 0
+
+		background-image: linear-gradient(to right, $c_link, $c_link 65%, $c_yellow 65%, $c_yellow 0)
+		background-size: contain
+		background-position: 100% 0
+		background-repeat: no-repeat
+		
+		z-index: -100
+
+	&__start-block
+		padding: 45px
+
+		color: #fff
+
+	&__list
+		margin-top: 40px
+
+	&__item
+		font-size: $fs_sm-super
+		font-weight: 400
+		&:before
+			content: "+"
+			font-size: 1em
+			margin-right: 1em
+			color: $c_yellow
+
+	&__end-block
+		position: absolute
+		top: 0
+		right: 0
+		width: 100%
+		height: 100%
+
+		background-image: url('../img/preimushestva.png')
+		background-position: 70% 50%
+		background-size: 130%
+		background-repeat: no-repeat
+		transform: scaleX(-1)
+
+		z-index: 100
+
+	&__title
+		font-family: 'Montserrat', sans-serif
+		font-size: $fs_lg
+		font-weight: 500
+
+	@media all and (max-width: 1200px)
+		&__title
+			font-size: $fs_lg_lite
+	
+	@media all and (max-width: 992px)
+		&__start-block
+			padding: 25px
+			background-color: $c_link
+			z-index: -1
+
+		&__end-block
+			background-position: 55% 50%
+			background-size: 190%
+
+			z-index: 100
+
+		&__title
+			font-size: $fs_md
+		&__item
+			font-size: $fs_sm
+
+	@media all and (max-width: 768px)
+		.container
+			max-width: 100%
+			padding: 0
+
+		&__cont
+			background: none
+			margin: 19px 0
+
+		&__start-block
+			display: flex
+			justify-content: center
+			background-color: $c_link
+			color: white
+
+		&__end-block
+			position: static
+			width: 100%
+			min-height: 260px
+			background-image: url('../img/preimushestva.png'), linear-gradient($c_yellow, $c_yellow)
+			background-position: 60% 50%, 0 0
+			background-size: 120% auto, 100% 100%
+			
+		&__list
+			margin-top: 20px
+
+		&__title
+			margin: 0
+			padding: 0

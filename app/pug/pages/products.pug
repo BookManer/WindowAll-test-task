@@ -1,0 +1,196 @@
+extends ../index.pug
+
+block main_style
+	link(rel="stylesheet", href="../assets/css/main.css")
+	link(rel="stylesheet", href="../fonts/fonts/museosanscyrl.css")
+	link(rel="stylesheet", href="../fonts/fonts/style.css")
+	link(href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet")
+	link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous")
+
+block title
+	title Продукция | Окна всем
+
+block header
+	+header("../assets", 1, "It's page is inner")
+
+block content
+	.cont-modal
+		.modal.form
+			span.modal__btn-close.fa.fa-times
+			h2.form__heading-line Заказать звонок
+			label
+				input(class="form__field" type="text" data-foo="Имя" required)
+				span(class="psevdo-placeholder") Имя
+			label
+				input(class="form__field" type="phone" data-placeholder="Телефон" required)
+				span(class="psevdo-placeholder") Телефон
+
+			.wrap
+				label.custom-cont
+					input(class="form__checkbox" type="checkbox" checked)
+					div(class="custom-checkbox")
+				span Согласен на обработку
+					a(href="/") персональных данных
+
+			button(class="form__submit" type="submit") Оставить заявку
+
+		.modal.form
+			span.modal__btn-close.fa.fa-times
+			h2.form__heading-line Заказать замер
+			label
+				input(class="form__field" type="text" data-foo="Имя" required)
+				span(class="psevdo-placeholder") Имя
+			label
+				input(class="form__field" type="phone" data-placeholder="Телефон" required)
+				span(class="psevdo-placeholder") Телефон
+
+			.wrap
+				label.custom-cont
+					input(class="form__checkbox" type="checkbox" checked)
+					div(class="custom-checkbox")
+				span Согласен на обработку
+					a(href="/") персональных данных
+
+			button(class="form__submit" type="submit") Оставить заявку
+
+		.modal.form
+			span.modal__btn-close.fa.fa-times
+			h2.form__heading-line Консультация менеджера
+			label
+				input(class="form__field" type="text" data-foo="Имя" required)
+				span(class="psevdo-placeholder") Имя
+			label
+				input(class="form__field" type="phone" data-placeholder="Телефон" required)
+				span(class="psevdo-placeholder") Телефон
+
+			.wrap
+				label.custom-cont
+					input(class="form__checkbox" type="checkbox" checked)
+					div(class="custom-checkbox")
+				span Согласен на обработку
+					a(href="/") персональных данных
+
+			button(class="form__submit" type="submit") Оставить заявку
+
+	.container
+		.row
+
+			.order-cont
+				figure.order-cont__order-wrap
+					span.fa.fa-phone
+					figcaption(class="order-cont__text" data-for-id-modal=0) Заказать звонок
+				figure.order-cont__order-wrap
+					span.fa.fa-umbrella
+					figcaption(class="order-cont__text" data-for-id-modal=1) Заказать замер
+				figure.order-cont__order-wrap
+					span.fa.fa-user
+					figcaption(class="order-cont__text" data-for-id-modal=2) Консультация менеджера
+
+
+
+			.col-12.slider
+				.slider__wrapp
+					img(src="../assets/img/картинка.png" alt="" width="100%")
+				.slider__wrapp
+					img(src="../assets/img/картинка.png" alt="" width="100%")
+				.slider__wrapp
+					img(src="../assets/img/картинка.png" alt="" width="100%")
+		section.service
+			h2.service__heading-line Продукция
+			.row.service__cont
+				figure(class="col-lg-4 col-md-6 col-12 service__wrapp")
+					span(class="service__icon icon-icon_prod_1")
+					figcaption(class="service__descr") Пластиковые окна
+				figure(class="col-lg-4 col-md-6 col-12 service__wrapp")
+					span(class="service__icon icon-icon_prod_2")
+					figcaption(class="service__descr") Балконы и лоджии
+				figure(class="col-lg-4 col-md-6 col-12 service__wrapp")
+					span(class="service__icon icon-icon_prod_3")
+					figcaption(class="service__descr") Пластиковые двери
+				figure(class="col-lg-4 col-md-6 col-12 service__wrapp")
+					span(class="service__icon icon-icon_prod_4")
+					figcaption(class="service__descr") Рулоонные шторы и жалюзи
+				figure(class="col-lg-4 col-md-6 col-12 service__wrapp")
+					span(class="service__icon icon-icon_prod_5")
+					figcaption(class="service__descr") Рольставни
+				figure(class="col-lg-4 col-md-6 col-12 service__wrapp")
+					span(class="service__icon icon-icon_prod_6")
+					figcaption(class="service__descr") Комплектующие
+		
+	.advantages
+		.container
+			.row.advantages__cont
+				.col-md-8.col-12.advantages__start-block
+					.advantages__wrap
+						h2.advantages__title Наши преимущества
+						ul.advantages__list
+							li.advantages__item Гибкая система скидок
+							li.advantages__item Срок изготовления 2-5 дня
+							li.advantages__item Рассрочка платежей
+							li.advantages__item Высокое качество
+							li.advantages__item Гарантия до 7 лет
+							li.advantages__item Широкий ассортимент 122 видов профилей!
+				.col-md-5.col-12.advantages__end-block
+	.container
+		section.service
+			h2.service__heading-line Услуги
+			.row.service__cont
+				figure(class="col-md-4 col-12 service__wrapp")
+					span(class="service__icon icon-icon_serv_1")
+					figcaption(class="service__descr") Производство
+				figure(class="col-md-4 col-12 service__wrapp")
+					span(class="service__icon icon-icon_serv_2")
+					figcaption(class="service__descr") Доставка
+				figure(class="col-md-4 col-12 service__wrapp")
+					span(class="service__icon icon-icon_serv_3")
+					figcaption(class="service__descr") Монтаж
+				figure(class="col-md-4 col-12 service__wrapp")
+					span(class="service__icon icon-icon_serv_4")
+					figcaption(class="service__descr") Замер и заказ
+				figure(class="col-md-4 col-12 service__wrapp")
+					span(class="service__icon icon-icon_serv_5")
+					figcaption(class="service__descr") Ремонт и обслуживание
+				figure(class="col-md-4 col-12 service__wrapp")
+					span(class="service__icon icon-icon_serv_6")
+					figcaption(class="service__descr") Гарантии
+
+
+	section.feedback
+		.container
+			.row
+				.col-md-7.col-12.feedback__start-block
+					h3.feedback__heading-line Запишитесь<br>на бесплатный<br>замер
+				.col-md-5.col-12.feedback__form
+					figure.feedback__success
+						img(class="feedback__icon-success" src="../assets/img/icon-succefull.png", alt="Успешная отправка")
+						figcaption(class="feedback__text-success") Заявка успешно отправлена
+					div(class="feedback__loading")
+						span(class="fa fa-spinner fa-pulse")
+
+					form.form
+						label
+							input(class="form__field" type="text" data-foo="Имя" required)
+							span(class="psevdo-placeholder") Имя
+						label
+							input(class="form__field" type="phone" data-placeholder="Телефон" required)
+							span(class="psevdo-placeholder") Телефон
+
+						.wrap
+							label.custom-cont
+								input(class="form__checkbox" type="checkbox" checked)
+								div(class="custom-checkbox")
+							span Согласен на обработку
+								a(href="/") персональных данных
+
+						button(class="form__submit" type="submit") Оставить заявку
+
+
+
+
+block scripts
+	script(src="../assets/js/index.js")
+	script.
+		$('.slider').slick({
+			dots: true,
+			infinite: true
+		});

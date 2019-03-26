@@ -1,0 +1,34 @@
+extends ../index.pug
+
+block main_style
+	link(rel="stylesheet", href="../assets/css/main.css")
+	link(rel="stylesheet", href="../fonts/fonts/museosanscyrl.css")
+	link(rel="stylesheet", href="../fonts/fonts/style.css")
+	link(href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet")
+	link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous")
+
+block title
+	title Контакты | Окна всем
+
+block header
+	+header("../assets", 2, "It's page is inner")
+
+block content
+	.container.contacts
+		hr
+		span(class="contacts__breadcrumb")
+			a(href="../") Главная  
+			|	/ Контакты
+		h3(class="contacts__title") Контакты
+		section(class="contacts__contact-blocks contact-blocks row")
+			each block in blocks
+				div(class="col-lg-3 col-md-6 col-12 contact-blocks__wrap-contact wrap-contact")
+					div(class="wrap")
+						img(class="wrap-contact__icon" src= block.href_icon)
+					h4(class="wrap-contact__title")= block.title
+					span(class="wrap-contact__descr")= block.descr
+		div(class="contacts__map")
+			iframe(src="https://yandex.ru/map-widget/v1/-/CCqLeF5A" width="560" height="400" frameborder="1" allowfullscreen="true")
+
+block scripts
+	script(src="../assets/js/mobile-menu.js")

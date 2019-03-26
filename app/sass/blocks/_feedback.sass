@@ -1,0 +1,235 @@
+.feedback
+	position: relative
+
+	padding: 100px 0
+
+	color: #fff
+	background-image: linear-gradient(75deg, $c_link, $c_link 50%, $c_yellow 50%, $c_yellow 0)
+ 
+	z-index: 10
+
+	&__heading-line
+		font-size: $fs_xl
+		font-weight: 500
+		@media all and (max-width: 768px)
+			text-align: center
+
+	&__loading
+		position: absolute
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 100%
+		height: 100%
+		font-size: 56px
+		
+		background-color: transparentize($c_yellow, .1)
+		color: $c_link
+
+		opacity: 0
+		z-index: -1
+
+		&--active
+			opacity: 1
+			z-index: 9999
+
+	&__success
+		position: absolute
+		left: -1px
+		display: flex
+		flex-flow: column nowrap
+		justify-content: center
+		align-items: center
+		font-size: 24px
+		width: 100%
+		height: 100%
+
+		background-color: $c_yellow
+		color: $c_link
+
+		opacity: 0
+		z-index: -1
+
+		&--active
+			opacity: 1
+			z-index: 999
+
+	&__icon-success
+		margin-bottom: .5em	
+
+	&__text-success
+		display: block
+		text-align: center
+		line-height: 1
+		font-weight: 500
+		width: 50%
+
+	&:before
+		content: ""
+		position: absolute
+		width: 20%
+		height: 120%
+		top: -20%
+		left: 46%
+
+		transform: rotate(-15deg)
+
+		background-image: url('../img/ruletka.png')
+		background-position: 0 0
+		background-size: auto 100%
+		background-repeat: no-repeat
+
+		z-index: 1
+
+		@media all and (max-width: 992px)
+			top: -15%
+			left: 56%
+			transform: rotate(0deg)
+
+		@media all and (max-width: 767px)
+			min-width: 100px
+			top: -120px
+			right: 0
+			transform: rotate(87deg)
+		@media all and (max-width: 377px)
+			top: -140px
+
+
+	@media all and (max-width: 992px)
+		padding: 0
+		background-image: linear-gradient(to bottom, $c_link 1%, $c_yellow 1%, $c_yellow 0)	
+
+		.container
+			padding: 0
+			margin-top: 30px
+			max-width: 100%
+
+		.row
+			margin: 0
+
+		&__start-block
+			padding: 30px
+			background-color: $c_link
+
+		&__form
+			margin: 0
+			padding: 0
+
+		&__heading-line
+			font-size: 32px
+			margin: 0 auto
+
+
+.form
+	display: flex
+	flex-flow: column nowrap
+
+	label
+		position: relative
+		
+
+	&__field
+		position: relative
+		display: block
+		min-width: 100%
+		font-size: $fs_sm-super
+
+		padding: 20px 20px
+		margin-top: 10px
+
+		color: $c_link
+		border-radius: 10px
+		border: none
+
+		& + .psevdo-placeholder
+			position: absolute
+			top: 50%
+			font-size: 18px
+
+			transform: translate(0, -40%)
+
+			color: $c_link
+
+		&:required:valid + .psevdo-placeholder
+			top: 15px
+			transform: translate(0, 0)
+			font-size: 12px
+
+	&__submit
+		font-size: $fs_sm-super
+
+		padding: 20px 0
+
+		background: transparent
+		border: 2px solid $c_link
+		border-radius: 10px
+		color: $c_link
+
+
+	.wrap
+		margin: 10px 0
+
+	span
+		color: $c_link
+		margin-left: 1.5em
+		a
+			margin-left: .5em
+			text-decoration: underline
+
+	.custom-cont
+		position: relative
+		
+
+	&__checkbox
+		
+		&:checked + .custom-checkbox:after
+			font-size: $fs_sm
+
+	.custom-checkbox
+		position: absolute
+		top: 0
+		left: 0
+		width: 25px
+		height: 25px
+		
+		border-radius: 2px
+		background-color: white
+
+		&:after
+			content: "✓"
+			font-size: 0
+			font-weight: 600
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			vertical-align: middle
+			text-align: center
+
+			color: $c_link
+			line-height: 0
+		
+
+	@media all and (max-width: 992px)
+		padding: 30px
+		background-color: $c_yellow
+
+		&__field
+			font-size: 14px
+
+			border-radius: 5px
+
+		&__submit
+			font-size: 18px
+			padding: 10px 0
+
+			border-radius: 5px
+
+	@media all and (max-width: 768px)
+		width: 100%
+		min-width: 300px
+		margin: 0 auto
+
+	@media all and (max-width: 567px)
+		&__field
+			padding: 15px 20px

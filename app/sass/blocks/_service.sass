@@ -1,0 +1,86 @@
+.service
+	margin-top: 1em
+
+	color: $c_link
+
+	&__heading-line
+		font-size: $fs_lg
+		font-weight: 500
+
+		margin: 60px 0 53px 0
+
+	&__cont
+		margin-bottom: 60px
+
+	&__wrapp
+		display: flex
+		align-items: flex-start
+
+		margin: 1.5em 0
+
+		&:hover
+			color: $c_light_link
+
+	&__icon
+		position: relative
+		width: 56px
+		height: 56px
+		font-size: 56px
+		
+		font-size: $fs_lg
+		color: inherit
+
+		&:after
+			position: absolute
+			content: ""
+			width: 150%
+			height: 150%
+			top: 50%
+			left: 0
+			transform: translateY(-50%)
+
+			border-radius: 50%
+			background-color: $c_yellow
+
+			z-index: -1
+
+	&__descr
+		width: 65%
+		font-size: $fs_md
+		font-weight: 400
+		margin-left: 20px
+		line-height: 1
+
+	@media all and (max-width: 992px)
+		&__heading-line
+			font-size: $fs_lg_lite
+			margin: 25px 0 19px 0
+
+		&__cont
+			margin-bottom: 0
+
+		&__descr
+			font-size: $fs_md-lite
+
+	@media all and (max-width: 768px)
+		&__icon
+			width: 54px
+			height: 54px
+			font-size: 54px
+
+		&__wrap
+			margin: 15px 0
+
+		&__descr
+			font-size: $fs_md-super-lite
+
+	@media all and (max-width: 576px)
+		&__icon
+			width: 35px
+			height: 35px
+			font-size: 35px
+		&__heading-line
+			font-size: $fs_md
+			margin: 19px 0 19px 0
+		&__descr
+			font-size: $fs_sm

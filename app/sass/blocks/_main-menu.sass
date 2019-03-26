@@ -1,0 +1,78 @@
+.main-nav
+	display: flex
+	flex-flow: row nowrap
+	justify-content: flex-end
+
+	@media all and (max-width: 991px)
+		display: none
+
+	&__item
+		position: relative
+
+		padding: .8em 0
+		margin-left: 0
+		margin-right: 30px
+
+		&--hasSubmenu
+			position: relative
+		&--hasSubmenu:hover > ul
+			display: block
+			opacity: 1
+		&--active > a:before
+			content: ""
+			width: 100%
+			height: 5px
+			position: absolute
+			bottom: 5px
+			left: 0
+			
+			background-color: $c_yellow
+
+	&__link
+		font-size: 16px
+		color: $c_link
+
+		&:hover:after
+			content: ""
+			width: 100%
+			height: 5px
+			position: absolute
+			bottom: 5px
+			left: 0
+			
+			background-color: $c_yellow
+
+	&__submenu
+		position: absolute
+		top: 100%
+		left: 0	
+
+.submenu
+	display: none
+	width: 300%
+	padding: 1em
+	border-radius: 5px
+	box-shadow: 0 10px 20px 0 gray
+	background-color: #fff
+	z-index: 100
+	opacity: 0
+
+	&__item
+		position: relative
+		
+		&:hover
+			text-indent: 2em
+
+	&__item:hover:before
+		content: ""
+		position: absolute
+		top: 50%
+		left: -1em
+		width: 2em
+		height: 5px
+
+		background-color: $c_yellow
+
+	&__link
+		color: $c_link
+		font-weight: 500

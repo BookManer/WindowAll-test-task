@@ -1,0 +1,21 @@
+@import main-menu	
+
+
+.header
+	position: relative
+	
+	min-width: 100%
+	padding: 1em 0
+	//margin: 0
+	align-items: center
+	
+	@media all and (max-width: 991px)
+		justify-content: space-between
+
+	&__phone
+		display: block
+		font-size: 22px
+		font-weight: 700
+		color: $c_link
+		@media all and (max-width: 1200px)
+			display: none

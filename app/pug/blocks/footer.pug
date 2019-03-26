@@ -1,0 +1,15 @@
+include ../variables.pug
+
+footer.footer
+		.container
+			.row.footer__top
+				each title,index in listTitlesFooter
+					div(class="footer__column col-lg-3 col-md-6 col-sm-12")
+						h6(class="footer__title")= title
+						if (index != 3)
+							ul(class= "main-menu footer__main-menu")
+								each item in itemsFooter[index]
+									li(class="main-menu__item footer__item")
+										a(href="" class="main-menu__link")= item
+						else
+							p(class="footer__contact-text") Череповец, ул. Химиков, 7</br> 8(8202)54-06-41</br>+7 921 723-06-41</br> okna540641@gmail.com
